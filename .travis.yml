@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 cache:
   directories:
@@ -8,9 +7,11 @@ node_js:
   - "8"
   - "9"
   - "10"
+  - "11"
+  - "12"
+  - "13"
   - node
 install:
-  - npm install -g purescript@0.12.0 pulp psc-package
+  - npm install -g spago
 script:
-  - psc-package install
-  - pulp run
+  - spago run
